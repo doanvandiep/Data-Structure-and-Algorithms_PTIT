@@ -33,7 +33,6 @@ void check()
 	cin >> n >> k;
 	matrix a;
 	for(int i=0;i<n;i++)
-	{
 		for(int j=0;j<n;j++) cin >> a.pos[i][j];
 		matrix b=power(a,k);
 		ll res=0;
@@ -45,7 +44,6 @@ void check()
 			}
 		}
 		cout << res;
-	}
 }
 int main()
 {
