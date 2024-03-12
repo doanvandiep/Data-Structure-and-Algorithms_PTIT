@@ -1,31 +1,31 @@
-#include<bits/stdc++.h>
-using namespace std;
-void Try(string s,int i)
+#include<iostream>
+
+void Try(int i,std::string s)
 {
 	if(i==s.size())
 	{
-		cout << s << endl;
-		return;
+		std::cout << s << std::endl;
+		return ;
 	}
 	if(s[i]=='?')
 	{
 		s[i]='0';
-		Try(s,i+1);
+		Try(i+1,s);
 		s[i]='1';
-		Try(s,i+1);
+		Try(i+1,s);
 	}else
 	{
-		Try(s,i+1);
+		Try(i+1,s);
 	}
 }
 int main()
 {
 	int t;
-	cin >> t;
+	std::cin >> t;
 	while(t--)
 	{
-		string s;
-		cin >> s;
-		Try(s,0);
+		std::string s;
+		std::cin >> s;
+		Try(0,s);
 	}
 }
